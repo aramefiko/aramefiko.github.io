@@ -3,7 +3,7 @@ $(document).ready(function () {
         if ($(this).val()) {
             $.getJSON('data/' + $(this).val(), function (data) {
                     $('#info').text(data.info);
-                    $.each(data.subject, function (value) {
+                    $.each(data.subject, function (key, value) {
                         $('#subject').append('<li>' + value + '</li>');
                     });
                 }
